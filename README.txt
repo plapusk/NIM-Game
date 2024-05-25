@@ -1,0 +1,26 @@
+matei.costescu1923@gmail.com
+Costescu Matei 333CA
+
+NIM Game Project README
+
+Overview
+This project involves the development of the game NIM using Arduino and a
+MAX7219 LED matrix. The game is controlled using a joystick and a button,
+allowing players to interact with the LED display. The game logic includes
+player movement, CPU opponent logic, difficulty selection etc.
+
+Features
+Player Interaction: Players can move their character using a joystick and make
+selections using a button.
+CPU Opponent: The game includes CPU opponent logic for single-player mode,
+with different difficulty levels.
+Difficulty Selection: Players can choose between different difficulty levels,
+affecting the CPU opponent's behavior.
+Win Condition Detection: The game detects win conditions and displays win
+animations accordingly.
+Map Generation: The game has a few preset maps but also the option for random
+map generation for more variety.
+
+Dependencies
+LedControl Library: This project utilizes the LedControl library for
+controlling the MAX7219 LED matrix.
