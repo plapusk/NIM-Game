@@ -210,6 +210,7 @@ void map_select() {
         else
             random_map();
         reset_cursor();
+        last_debounce_time = current_time;
         buttonState = 1;
     }
 }
@@ -259,6 +260,7 @@ void player_move() {
     if (buttonState == 0) {
         to_move = (to_move + 1) % 2;
         current_map[x] = y - 1;
+        last_debounce_time = current_time;
         reset_cursor();
         buttonState = 1;
     }
@@ -375,6 +377,7 @@ void game_manager() {
     }
     unsigned long curr_time = millis();
     if (win_game() == 1 || last_debounce_time + RESET_TIME < curr_time) {
+      last_debounce_time = curr_time;
       reset_game();
       return;
     }
